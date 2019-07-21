@@ -1,9 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
+import CopyTrello from './copyTrello';
 
-class App extends Component {
-  render() {
-    return <div>Hello World</div>;
-  }
-}
+const App = () => {
+  return (
+    <div>
+      <CopyTrello />
+    </div>
+  );
+};
 
 export default App;
