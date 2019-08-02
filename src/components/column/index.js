@@ -4,7 +4,7 @@ import { Droppable, Draggable } from 'react-beautiful-dnd';
 
 import Task from '../task';
 
-import { Container, Title, TaskList } from './styles';
+import { Container, Title, TaskList, AddButton } from './styles';
 
 const Column = props => {
   const { column, tasks, index } = props;
@@ -24,6 +24,7 @@ const Column = props => {
               </TaskList>
             )}
           </Droppable>
+          <AddButton>+ Add new Card</AddButton>
         </Container>
       )}
     </Draggable>

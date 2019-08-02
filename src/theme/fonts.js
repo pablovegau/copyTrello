@@ -1,1 +1,1 @@
-export const sansSerif = 'Ubuntu';
+export const sansSerif = 'Ubuntu, sans-serif';

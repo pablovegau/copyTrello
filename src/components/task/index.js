@@ -6,6 +6,15 @@ import { Container } from './styles';
 
 const Task = props => {
   const { task, index } = props;
+
+  const truncateString = (string, length = 100, ending = '...') => {
+    if (string.length > length) {
+      return string.substring(0, length - ending.length) + ending;
+    }
+
+    return string;
+  };
+
   return (
     <Draggable draggableId={task.id} index={index}>
       {(provided, snapshot) => (
@@ -15,7 +24,7 @@ const Task = props => {
           ref={provided.innerRef}
           isDragging={snapshot.isDragging}
         >
-          {task.content}
+          {truncateString(task.content)}
         </Container>
       )}
     </Draggable>
