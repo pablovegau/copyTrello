@@ -4,7 +4,7 @@ import { DragDropContext, Droppable } from 'react-beautiful-dnd';
 
 import initialData from '../../assets/initial-data';
 
-import { Container } from './styles';
+import { Container, ColumnsContainer, Title } from './styles';
 
 const Board = () => {
   const [dndData, setdndData] = useState(initialData);
@@ -85,19 +85,22 @@ const Board = () => {
 
   return (
     <DragDropContext onDragEnd={onDragEnd}>
-      <Droppable droppableId="all-columns" direction="horizontal" type="column">
-        {provided => (
-          <Container {...provided.droppableProps} ref={provided.innerRef}>
-            {dndData.columnOrder.map((columnId, index) => {
-              const column = dndData.columns[columnId];
-              const tasks = column.taskIds.map(taskId => dndData.tasks[taskId]);
+      <Container>
+        <Title>Board title</Title>
+        <Droppable droppableId="all-columns" direction="horizontal" type="column">
+          {provided => (
+            <ColumnsContainer {...provided.droppableProps} ref={provided.innerRef}>
+              {dndData.columnOrder.map((columnId, index) => {
+                const column = dndData.columns[columnId];
+                const tasks = column.taskIds.map(taskId => dndData.tasks[taskId]);
 
-              return <Column key={column.id} column={column} tasks={tasks} index={index} />;
-            })}
-            {provided.placeholder}
-          </Container>
-        )}
-      </Droppable>
+                return <Column key={column.id} column={column} tasks={tasks} index={index} />;
+              })}
+              {provided.placeholder}
+            </ColumnsContainer>
+          )}
+        </Droppable>
+      </Container>
     </DragDropContext>
   );
 };
