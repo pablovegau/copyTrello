@@ -7,7 +7,6 @@ import centered from '@storybook/addon-centered/react';
 import crfTheme from './crfTheme';
 import bgcolors from './backgroundColors';
 
-// automatically import all files ending in *.stories.js
 const req = require.context('../stories', true, /\.stories\.js$/);
 function loadStories() {
   req.keys().forEach(filename => req(filename));
@@ -21,18 +20,8 @@ addParameters({
 });
 
 addDecorator(withInfo);
-
 addDecorator(centered);
-
-
 addDecorator(withA11y);
-
-// addDecorator(
-//   withInfo({
-//     inline: true,
-//   }),
-// );
-
 addDecorator(withKnobs);
 
 configure(loadStories, module);
