@@ -27,20 +27,3 @@ export const TaskList = styled.div`
   padding: ${appPadding.milli};
   min-height: ${rem('100px')};
 `;
-
-export const AddButton = styled.button`
-  padding: ${appPadding.milli};
-  border: none;
-  border-radius: 0 0 4px 4px;
-  background-color: transparent;
-  color: ${appGrayColors.black60};
-  font-size: ${appFontSizes.milli};
-  text-align: left;
-  cursor: pointer;
-  transition: color 0.3s, background-color 0.3s;
-
-  &:hover {
-    background-color: ${appColors.lightPrimary};
-    color: ${appGrayColors.black80};
-  }
-`;
