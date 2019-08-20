@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { storiesOf } from '@storybook/react';
+import { GlobalStyle } from '../src/styles/GlobalStyle';
+
 import ColumnAddTaskButton from '../src/components/buttons/columnAddTaskButton';
 
 import { text } from '@storybook/addon-knobs';
@@ -13,12 +15,15 @@ storiesOf('Buttons').add('ColumnAddTaskButton', () => {
   const textColor = text('Text color', appGrayColors.black60);
   const textColorHover = text('Text color hover', appGrayColors.black80);
   return (
-    <ColumnAddTaskButton
-      label={label}
-      bgColor={bgColor}
-      bgColorHover={bgColorHover}
-      textColor={textColor}
-      textColorHover={textColorHover}
-    />
+    <Fragment>
+      <GlobalStyle />
+      <ColumnAddTaskButton
+        label={label}
+        bgColor={bgColor}
+        bgColorHover={bgColorHover}
+        textColor={textColor}
+        textColorHover={textColorHover}
+      />
+    </Fragment>
   );
 });

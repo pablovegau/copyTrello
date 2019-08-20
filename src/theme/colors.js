@@ -16,11 +16,12 @@ export const appGrayColors = {
   white: lighten(1, black),
 };
 
-// https://mycolor.space/?hex=%2332B3FF&sub=1
+// https://mycolor.space/?hex=%23845EC2&sub=1
 
-const primary = '#32B3FF';
-const secondary = '#37EFB9';
-const accent = '#F9F871';
+const primary = '#845ec2';
+const secondary = '#009efa';
+const tertiary = '#00d2fc';
+const quaternary = '#4ffbdf';
 
 export const appColors = {
   primary: primary,
@@ -29,13 +30,12 @@ export const appColors = {
   secondary: secondary,
   darkSecondary: darken(0.2, secondary),
   lightSecondary: lighten(0.2, secondary),
-  accent: accent,
-  darkAccent: darken(0.2, accent),
-  lightAccent: lighten(0.2, accent),
+  tertiary: tertiary,
+  darkTertiary: darken(0.2, tertiary),
+  lightTertiary: lighten(0.2, tertiary),
+  quaternary: quaternary,
+  darkQuaternary: darken(0.2, quaternary),
+  lightQuaternary: lighten(0.2, quaternary),
   primaryText: appGrayColors.black90,
   secondaryText: appGrayColors.black50,
-};
-
-export const appSemiTransparentColors = {
-  veil: 'rgba(255, 193, 7, .3)',
 };

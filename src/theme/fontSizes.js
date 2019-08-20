@@ -1,5 +1,5 @@
 export const appFontSizes = {
-  exa: '2.5em',
+  exa: '2.5em', // 40px
   peta: '1.875em', // 30px
   tera: '1.5em', // 24px
   giga: '1.375em', // 22px
