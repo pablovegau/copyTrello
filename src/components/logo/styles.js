@@ -56,7 +56,7 @@ export const MiniSquareThree = styled(MiniSquare)`
 
 export const Text = styled.h1`
   margin-left: ${textMarginLeft};
-  color: ${appGrayColors.black60};
+  color: ${appGrayColors.black70};
   font-family: ${fantasy};
   font-size: ${appFontSizes.exa};
   line-height: 0;
